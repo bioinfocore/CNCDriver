@@ -525,7 +525,7 @@ getCDSPvalueWithPreFilter2<-function(inputFileDir,outputFileDir,
     arrangeVATannotation<-function(field,useCores){
       tmpVector<-{}
       
-      a1<-strsplit(field,",")
+      a1<-strsplit(as.character(field),",")
       
       tmpVector<-mclapply(1:length(a1), function(x){
         cat(sprintf("variant:%s /%s\n",x,length(a1)))
